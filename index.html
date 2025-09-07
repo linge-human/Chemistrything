@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>CHEMI Calculations</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .fade-in { animation: fadeIn 0.6s ease; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .block-card { background: white; border-radius: 1rem; padding: 1.5rem; box-shadow: 0 4px 24px #0001; margin-bottom: 2rem; }
+    .block-card .close-btn { float: right; color: #f43f5e; cursor: pointer; }
+    .block-card .close-btn:hover { color: #be123c; }
+    .category-btn.active { background: #6366f1; color: white; }
+    .category-btn { background: #ede9fe; color: #3730a3; }
+  </style>
+</head>
+<body class="bg-slate-50 min-h-screen">
+  <div class="max-w-4xl mx-auto py-10">
+    <h1 class="text-3xl font-bold mb-6 text-indigo-700">CHEMI Calculations</h1>
+    <div class="flex flex-col md:flex-row gap-8">
+      <aside class="md:w-56">
+        <h2 class="font-semibold text-lg mb-3">Categories</h2>
+        <div id="categories"></div>
+        <div id="functions" class="mt-6"></div>
+      </aside>
+      <main class="flex-1">
+        <button id="clearAll" class="mb-4 bg-red-100 text-red-700 px-3 py-1 rounded hover:bg-red-200 transition">Clear All</button>
+        <div id="workspace"></div>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
